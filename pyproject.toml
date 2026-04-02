@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prism-narrative"
+version = "0.1.0"
+description = "PRISM: narrative clustering and adaptation toolkit"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "PRISM_dev" }]
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "scipy",
+    "matplotlib",
+    "sentence-transformers",
+    "torch",
+    "datasets",
+    "openai>=1.0.0",
+    "gensim",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/prism-dev"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["prism*"]
+
